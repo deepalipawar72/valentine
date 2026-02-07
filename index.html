@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💖</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      width: 320px;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    }
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      color: #e63946;
+    }
+    button {
+      padding: 12px 22px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .yes { background: #ff4d6d; color: white; }
+    .no { background: #adb5bd; color: white; }
+    .result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7" alt="Valentine">
+
+  <h2>Will you be my Valentine? 💖</h2>
+
+  <button class="yes" onclick="reply('yes')">Yes ❤️</button>
+  <button class="no" onclick="reply('no')">No 🙈</button>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function reply(ans) {
+    document.getElementById("result").innerText =
+      ans === "yes"
+        ? "Yay! 💕 You made my day 😍"
+        : "It's okay 😊 Thanks for being honest!";
+  }
+</script>
+
+</body>
+</html>
