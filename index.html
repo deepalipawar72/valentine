@@ -8,10 +8,10 @@
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #ff758c, #ff7eb3);
       height: 100vh;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0;
     }
     .card {
       background: white;
@@ -39,34 +39,28 @@
     }
     .yes { background: #ff4d6d; color: white; }
     .no { background: #adb5bd; color: white; }
-    .result {
-      margin-top: 15px;
-      font-size: 18px;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
 
 <div class="card">
-  <img src="Penguin.jpg" alt="Valentine">
+
+  <!-- YOUR IMAGE -->
+  <img src="Penguin.jpg" alt="Valentine image">
 
   <h2>Will you be my Valentine? 💖</h2>
 
-  <button class="yes" onclick="reply('yes')">Yes ❤️</button>
-  <button class="no" onclick="reply('no')">No 🙈</button>
+  <!-- YES -->
+  <a href="mailto:deepalipawar310@gmail.com?subject=Valentine%20Answer&body=My%20answer%20is:%20YES">
+    <button class="yes">Yes ❤️</button>
+  </a>
 
-  <div class="result" id="result"></div>
+  <!-- NO -->
+  <a href="mailto:deepalipawar310@gmail.com?subject=Valentine%20Answer&body=My%20answer%20is:%20NO">
+    <button class="no">No 🙈</button>
+  </a>
+
 </div>
-
-<script>
-  function reply(ans) {
-    document.getElementById("result").innerText =
-      ans === "yes"
-        ? "Yay! 💕 You made my day 😍"
-        : "It's okay 😊 Thanks for being honest!";
-  }
-</script>
 
 </body>
 </html>
